@@ -25,12 +25,12 @@
     require_once("config.php");
 
 
-    // require authentication for most pages
+    /* require authentication for most pages
     if (!preg_match("{/(:?login|logout|register|return_to)\d*\.php$}", $_SERVER["PHP_SELF"]))
     {
         if (!isset($_SESSION["user"]));
             redirect("return_to.php");
-    }
+    }*/
 
     // connect to database server
     if (($connection = @mysql_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD)) === false)

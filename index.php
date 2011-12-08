@@ -10,10 +10,6 @@
  ***************************************************************************/
    // require common code
    require("includes/common.php");
-   
-    // isset
-    if (isset($_SESSION["user"]));
-            dump("user is set");
 
    // remember session id
    $id = $_SESSION["id"];
