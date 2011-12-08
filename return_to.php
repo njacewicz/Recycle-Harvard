@@ -11,9 +11,6 @@
     // require common.php
     require_once("includes/common.php");
     
-    // configuration
-    require_once(dirname(__FILE__) . "/includes/config.php");
- 
     // remember which user, if any, logged in
     $user = CS50::getUser(RETURN_TO);
     if ($user !== false)
