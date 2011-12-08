@@ -20,7 +20,6 @@
     
     // prepare SQL
     $sql = "INSERT INTO users (name, email, house) VALUES ('$name',   '$email', '$house')";
-    //$sql = "INSERT INTO users (points) VALUES (100)";
   
     // execute insertion
     $result = mysql_query($sql);
