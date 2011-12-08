@@ -54,10 +54,7 @@
        
        // after the page is loaded, conduct validation by Ajax
        $(document).ready(function(){
-       
-            // hide the learn more tag when the page is loaded
-            $("#learn").hide();
-            
+
             // when the trash can is clicked, fire the validation check
             $("#trash").click(function() {
             
