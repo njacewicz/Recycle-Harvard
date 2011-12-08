@@ -18,13 +18,13 @@
     
     // find the user's id
     $email = mysql_real_escape_string($_SESSION["user"]["email"]);
-    $result = mysql_query("SELECT id FROM users WHERE email = '$email'");
+    $result1 = mysql_query("SELECT id FROM users WHERE email = '$email'");
     
     // dump test
-    dump($result);
+    //dump($result);
                       
     // access the data row
-    $row = mysql_fetch_array($result); 
+    $row = mysql_fetch_array($result1); 
                      
     // define session id to be the id in the database
     $_SESSION["id"] = $row["id"];
