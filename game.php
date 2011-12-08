@@ -61,6 +61,9 @@
             // when the trash can is clicked, fire the validation 
             $("#trash").click(function() {
             
+            // show it
+             $("#learn").show();
+            
             // remember that the trash wash clicked  
             var bin = $("#trash").attr('alt');
             
