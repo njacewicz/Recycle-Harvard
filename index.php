@@ -10,7 +10,7 @@
  ***************************************************************************/
 
    // require common code
-   require("includes/config.php");
+   require("includes/common.php");
    
 
 ?>
