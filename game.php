@@ -90,9 +90,6 @@
             // load a new image to the page for them to evaluate     
             random_image();  
             
-            // hide the learn more tage
-            $("#learn").hide();
-            
             // send the status and receptacle data to game2.php for validation and points update    
             $.ajax("game2.php",{
             data: {status:status, bin:bin},
@@ -115,10 +112,7 @@
             
             // load a new image to the page for them to evaluate     
             random_image();
-            
-            // hide the learn more tage
-            $("#learn").hide();
-            
+
             // send the status and receptacle data to game2.php for validation and points update    
             $.ajax("game2.php",{
             data: {status:status, bin:bin},
