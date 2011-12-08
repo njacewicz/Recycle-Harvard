@@ -77,7 +77,7 @@
                 $("#points").html(data.points);
                 // if their answer was incorrect, show the learn tag
                 if (data.correct == "You are incorrect")
-                    $("#learn").hide();
+                    $("#learn").show();
             }});          
       });
       
