@@ -128,20 +128,20 @@
      </div>
      <p>Click on the proper receptacle (trash bin, single-stream recycling, or electronic recycling),
                  and gain one point per correctly sorted item!</p>
-            <table class="center">
-                <tr align = "center">
-                    <td id ="Correctness" style ="color:green">Are you right or wrong?</td>
-                <tr>    
-                    <td>
+     <table class="center">
+             <tr align = "center">
+                <td id ="Correctness" style ="color:green">Are you right or wrong?</td>
+             <tr>    
+                <td>
                     <img id="RandomItem" alt="Item to Sort" src=""/>                      
-                    </td>
-                </tr>
-                <tr id= "Caption" style="text-align:center"></tr>
-                <tr></tr>
-                <tr style="text-align:center">
-                    <td id ="points"></td>
-                 </tr>    
-             </table>               
+                </td>
+             </tr>
+             <tr id= "Caption" style="text-align:center"></tr>
+                <td></td>
+             <tr style="text-align:center">
+                  <td id ="points"></td>
+             </tr>    
+     </table>               
              <div id = "bottom">
                 <table>
                     <tr> 

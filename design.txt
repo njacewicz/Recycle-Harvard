@@ -1,0 +1,30 @@
+Design
+Annie Baldwin and Natalie Jacewicz
+
+	Our game is composed of several .php files inside a file called Recycle-Harvard. When a user attempts to access our quiz, she will first encounter the CS50 login. After providing her Harvard ID and PIN, return_to.php will execute. Using the email address returned by CS50 login, we look to see if the user has logged in before by checking if the email address is in our MySQL database. If the user has not logged in before, we redirect the user to register.php, which invites her to select her Harvard house. When she hits “register,” we call register2.php, where the user’s name, house, and email are added to mySQL. The user is then redirected to index.php. If the user’s email was already in the mySQL database, the user is redirected from return_to.php to index.php, without going through the register process.
+
+	In index.php, we have a big board, which lists players in descending order by number of points, and we have two links to text pages about recycling at Harvard: (erecycle.html and singlestream.html). A player may also choose to play the game via the “Play the game!” link. This link redirects the user to game.php.
+
+	Game.php and game2.php were certainly the most challenging part of our coding – it took us days to get it working .To avoid constant reloading, we decided we wanted to use jQuery to call game2.php and check whether or not the user chose the correct receptacle (by clicking on the trashcan, the recycling bin, or the E-waste bucket), before returning JSON. This proved difficult, since many methods we attempted had complicated syntax that seemed correct (even to TF’s) but didn’t work. Eventually, we ended up creating an array in game2.php and echoing array that via JSON_encode.
+	To walk you through the code in a bit more detail:
+
+game.php
+
+The function random_image 
+This function generates a pseudo-random integer and accesses items.js – a collection of javascript structs of items. Each item has a name (which we use to call the jpg of the item in a folder called “Images”) and a status, which we use to keep track of whether the item is trash, recyclable, or electronic-recycling. Each item also has a caption – the name of the item, in case someone can’t tell what the picture is. Function random_image then sets the id’s of table divisions (such as “RandomItem” and “Caption”) to match the random item it’s just selected.
+
+Once someone sees a random item, it’s time to click a receptacle. This where the magic happens. We use a ready function to wait for trash, recycling, or ewaste to be clicked. In any of the three cases, we then use AJAX to call game2.php, feeding it the variables “status” and “bin” and returning a type of JSON.
+
+When the JSON is returned, “Correctness” and “Points” in the HTML below is set to display the returned values.
+
+Game2.php
+After requiring common.php (which in turn requires a number of other files, among them config.php for our CS50ID login) we “GET” to get bin and status. We then check if bin equals status or not, and we either add or subtract a point from the mySQL database. To get a correct/incorrect message the number of points to appear, we created an array with settings for ‘correct’ and ‘points.’ We then echoed that array using json_encode. This looks simple, but it took us days. 
+
+The user can play the game as long as she wishes, and when she wants to log out, she may click the “Logout” button. This logs her out using logout.php.
+
+Most of the style on our pages is controlled by css style sheets. All of the images were Photoshopped to have a transparent background.
+
+
+
+
+

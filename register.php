@@ -52,6 +52,7 @@
                   <option value="Winthrop">Winthrop House</option>
                   </select>
             </td>
+            <td colspan="2"><input type="submit" value="Create an account"></td> 
           </tr>
           <tr>
             <td colspan="2"><input type="submit" value="Register"></td>
@@ -61,7 +62,6 @@
     </div>
 
     <div id="bottom">
-      
     </div>
 
   </body>
