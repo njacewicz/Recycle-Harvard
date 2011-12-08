@@ -52,7 +52,6 @@
                   <option value="Winthrop">Winthrop House</option>
                   </select>
             </td>
-            <td colspan="2"><input type="submit" value="Create an account"></td> 
           </tr>
           <tr>
             <td colspan="2"><input type="submit" value="Register"></td>
@@ -62,6 +61,17 @@
     </div>
 
     <div id="bottom">
+      <a href="singlestream.html">Single Stream Recycling</a>
+      |
+      <a href="erecycle.html">Electronic Recycling</a>
+      |
+      <a href="game.php">Play the game!</a>
+      |
+      <a href="login.php">Login!</a>
+      |
+      <a href="logout.php" style="font-weight: bold">Log Out</a>
+    </div>
+    
     </div>
 
   </body>
