@@ -12,6 +12,8 @@
    // require common code
    require("includes/common.php");
    
+   // remember session id
+   $id = $_SESSION["id"];
 
 ?>
 

@@ -21,7 +21,7 @@
     $result = mysql_query("SELECT id FROM users WHERE email = $email");
     
     // dump test
-    dump($email);
+    echo(mysql_error());
                       
     // access the data row
     $row = mysql_fetch_array($result); 
@@ -33,7 +33,7 @@
     $id = $_SESSION["id"];
     
     // if that user has already registered, redirect them to index.php
-    $result = mysql_query("SELECT * FROM users WHERE email = $email");
+    $result = mysql_query("SELECT * FROM users WHERE email = '$email'");
     if (mysql_num_rows($result) == 1)
         redirect("index.php");
     else {
