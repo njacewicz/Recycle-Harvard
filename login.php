@@ -10,7 +10,7 @@
  ***************************************************************************/
 
     // require common code
-    require_once("includes/common.php"); 
+    require_once("includes/config.php"); 
  
     // if user is already logged in, redirect to index.php
     if (isset($_SESSION["user"]))

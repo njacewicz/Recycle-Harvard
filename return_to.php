@@ -29,7 +29,7 @@
     $result = mysql_query("SELECT id FROM users WHERE email = $email");
     
     // dump test
-    //dump($result);
+    dump($result);
                       
     // access the data row
     $row = mysql_fetch_array($result); 
@@ -44,8 +44,8 @@
     $result = mysql_query("SELECT * FROM users WHERE email = $email");
     if (mysql_num_rows($result) == 1)
         redirect("index.php");
-    else
-        redirect("register.php");
+    else {
+        redirect("register.php");}
 
 ?>
 
