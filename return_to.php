@@ -10,6 +10,8 @@
  ***************************************************************************/ 
     // require common.php
     require_once("includes/common.php");
+      
+    dump(isset($_SESSION["user"]));  
     
     // remember which user, if any, logged in
     $user = CS50::getUser(RETURN_TO);
@@ -19,8 +21,7 @@
     // find the user's id
     $email = mysql_real_escape_string($_SESSION["user"]["email"]);
     $result1 = mysql_query("SELECT id FROM users WHERE email = '$email'");
-    
-    dump(isset($_SESSION["user"]));                  
+                  
     // access the data row
     $row = mysql_fetch_array($result1); 
                      
