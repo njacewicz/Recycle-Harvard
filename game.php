@@ -59,7 +59,7 @@
             // remember that the trash wash clicked  
             var bin = $("#trash").attr('alt');
             
-            // load a new image to the page for them to evaluate     
+            // load a new image (even for the users who arent playing for points)    
             random_image();
             
             // make the ajax call to server    
@@ -67,7 +67,7 @@
             data: {status:status, bin:bin},
             dataType: "json",
             success: function(data){ 
-                // upon success, update 
+                // upon success, update points and whether their answer was correct
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
             }});          
@@ -79,18 +79,17 @@
             // remember what bin was clicked (recycling)  
             var bin = $("#recycle").attr('alt');
             
+            // load a new image to the page for them to evaluate     
+            random_image();  
+            
             // send the status and receptacle data to game2.php for validation and points update    
             $.ajax("game2.php",{
             data: {status:status, bin:bin},
             dataType: "json",
             success: function(data){
-             
-                
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                       
-            // load a new image to the page for them to evaluate     
-            random_image();  
             }});
                  
       });
@@ -102,18 +101,16 @@
             // remember what bin was clicked (trash)  
             var bin = $("#ewaste").attr('alt');
             
+            // load a new image to the page for them to evaluate     
+            random_image();
+            
             // send the status and receptacle data to game2.php for validation and points update    
             $.ajax("game2.php",{
             data: {status:status, bin:bin},
             dataType: "json",
             success: function(data){
-                
-                
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
-                      
-            // load a new image to the page for them to evaluate     
-            random_image();
             }});
 
      });  
