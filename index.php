@@ -8,14 +8,13 @@
  *
  *          Support the interface for a user to play a game.           
  ***************************************************************************/
+   // require common code
+   require("includes/common.php");
+   
     // isset
     if (isset($_SESSION["user"]));
             dump("user is set");
 
-
-   // require common code
-   require("includes/common.php");
-   
    // remember session id
    $id = $_SESSION["id"];
 
