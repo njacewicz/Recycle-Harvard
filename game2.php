@@ -40,7 +40,7 @@ if ($bin == $status)
      $points = $row["points"];
      
      // define array to display their correctness, points, and whether they should go learn some more
-     $arr = array('correct' => 'You are correct', 'points' => $points, 'learn' => 0);
+     $arr = array('correct' => 'You are correct', 'points' => $points);
      
      // echo that array
      echo json_encode($arr);
@@ -66,7 +66,7 @@ if ($bin != $status)
     $points = $row["points"];
    
     // define array to display their correctness, points, and whether they should go learn some more
-    $arr = array('correct' => 'You are incorrect', 'points' => $points, 'learn' => 1);
+    $arr = array('correct' => 'You are incorrect', 'points' => $points);
      
     // echo that array
     echo json_encode($arr);
