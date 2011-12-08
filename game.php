@@ -116,7 +116,7 @@
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                 // give them the option to learn more
-                $("#Learn More").attr("href", singlestream.html);   
+                $("#Learn More").attr("href", erecycle.html);   
             }});
 
      });  
@@ -134,7 +134,7 @@
      <table class="center">
              <tr align = "center">
                 <td id ="Correctness" style ="color:green"></td>
-                <td id = "Learn More">Confused? Click <a href="game.php">here </a>to learn more!</td>
+                <td>Confused? Click <a id = "Learn More" href="">here </a>to learn more!</td>
              <tr>    
                 <td>
                     <img id="RandomItem" alt="Item to Sort" src=""/>                      
