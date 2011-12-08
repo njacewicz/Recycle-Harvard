@@ -59,7 +59,7 @@
             $("#trash").click(function() {
             
             // hide the learn more tag when the trash image is clicked
-            $("#learn").hide();
+            //$("#learn").hide();
             
             // remember that the trash was clicked  
             var bin = $("#trash").attr('alt');
@@ -76,8 +76,8 @@
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                 // if their answer was incorrect, show the learn tag
-                if (data.learn == 1)
-                    $("#learn").show();
+                /*if (data.learn == 1)
+                    $("#learn").show();*/
             }});          
       });
       
@@ -88,7 +88,7 @@
             var bin = $("#recycle").attr('alt');
             
             // hide the learn more tag when the trash image is clicked
-            $("#learn").hide();
+            //$("#learn").hide();
             
             // load a new image to the page for them to evaluate     
             random_image();  
@@ -102,8 +102,8 @@
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                 // if their answer was incorrect, show the learn more tag
-                if (data.learn == 1)
-                    $("#learn").show();  
+                /*if (data.learn == 1)
+                    $("#learn").show();  */
             }});
                  
       });
@@ -115,7 +115,7 @@
             var bin = $("#ewaste").attr('alt');
             
             // hide the learn more tag when the trash image is clicked
-            $("#learn").hide();
+            //$("#learn").hide();
             
             // load a new image to the page for them to evaluate     
             random_image();
@@ -129,8 +129,8 @@
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                 // if their answer was incorrect, show the learn more tag
-                if (data.learn == 1)
-                    $("#learn").show();   
+                /*if (data.learn == 1)
+                    $("#learn").show(); */  
             }});
 
      });  
