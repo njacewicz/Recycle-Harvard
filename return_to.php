@@ -18,7 +18,7 @@
     
     // find the user's id
     $email = mysql_real_escape_string($_SESSION["user"]["email"]);
-    $result = mysql_query("SELECT id FROM users WHERE email = $email");
+    $result = mysql_query("SELECT id FROM users WHERE email = '$email'");
     
     // dump test
     dump(mysql_error());
