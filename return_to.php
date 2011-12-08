@@ -20,7 +20,7 @@
     $email = mysql_real_escape_string($_SESSION["user"]["email"]);
     $result1 = mysql_query("SELECT id FROM users WHERE email = '$email'");
     
-    dump($_SESSION["user"]);                  
+    dump(isset($_SESSION["user"]));                  
     // access the data row
     $row = mysql_fetch_array($result1); 
                      
