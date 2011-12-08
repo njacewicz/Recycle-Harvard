@@ -52,7 +52,7 @@
        }
        
        
-       // after the page is loaded and the trash is clicked, check whether that item belongs in the trash
+       // after the page is loaded, conduct validation by Ajax
        $(document).ready(function(){
        
             // hide the learn more tag when the page is loaded
@@ -64,7 +64,7 @@
             // hide the learn more tag when the trash image is clicked
             $("#learn").hide();
             
-            // remember that the trash wash clicked  
+            // remember that the trash was clicked  
             var bin = $("#trash").attr('alt');
             
             // load a new image (even for the users who arent playing for points)    
@@ -79,7 +79,7 @@
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                 // if their answer was incorrect, show the learn tag
-                if (data.answer == 1)
+                if (data.learn == 1)
                     $("#learn").show();
             }});          
       });
@@ -89,6 +89,9 @@
             
             // remember what bin was clicked (recycling)  
             var bin = $("#recycle").attr('alt');
+            
+            // hide the learn more tag when the trash image is clicked
+            $("#learn").hide();
             
             // load a new image to the page for them to evaluate     
             random_image();  
@@ -101,8 +104,9 @@
                 // upon success, update points and whether their answer was correct
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
-                // give them the option to learn more
-                $('#learn').attr('href', 'singlestream.html');   
+                // if their answer was incorrect, show the learn more tag
+                if (data.learn == 1)
+                    $("#learn").show();  
             }});
                  
       });
@@ -112,6 +116,9 @@
             
             // remember what bin was clicked (trash)  
             var bin = $("#ewaste").attr('alt');
+            
+            // hide the learn more tag when the trash image is clicked
+            $("#learn").hide();
             
             // load a new image to the page for them to evaluate     
             random_image();
@@ -124,8 +131,9 @@
                 // upon success, update points and whether their answer was correct
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
-                // give them the option to learn more
-                $('#learn').attr('href', 'erecycle.html');   
+                // if their answer was incorrect, show the learn more tag
+                if (data.learn == 1)
+                    $("#learn").show();   
             }});
 
      });  
@@ -143,7 +151,7 @@
      <table class="center">
              <tr>
                 <td id ="Correctness" style ="color:green"></td>
-                <td>Confused? Click <a href="singlestream.html" id="learn">here </a>to learn more!</td>
+                <td id="learn">Confused? Click <a href="singlestream.html">here </a>to learn more!</td>
              <tr>    
                 <td>
                     <img id="RandomItem" alt="Item to Sort" src="Images/logo.png"/>                      
