@@ -116,7 +116,7 @@
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                 // give them the option to learn more
-                $('learn').attr('href', 'erecycle.html');   
+                $('#learn').attr('href', 'erecycle.html');   
             }});
 
      });  
