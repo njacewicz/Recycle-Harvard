@@ -130,7 +130,7 @@
      <table class="center">
              <tr align = "center">
                 <td id ="Correctness" style ="color:green"></td>
-                <td id = "Learn More">Confused? Click<a href="game.php">here</a>to learn more!</td>
+                <td id = "Learn More">Confused? Click <a href="game.php">here</a>to learn more!</td>
              <tr>    
                 <td>
                     <img id="RandomItem" alt="Item to Sort" src=""/>                      
