@@ -22,6 +22,9 @@
     // execute query
     $result = mysql_query($sql);
 
+    // error
+    echo(mysql_error());
+    
     // if we found user, check password
     if (mysql_num_rows($result) == 1)
     {
@@ -40,5 +43,5 @@
     }
 
     // else report error
-    apologize("Invalid username and/or password!");
+    //apologize("Invalid username and/or password!");
 

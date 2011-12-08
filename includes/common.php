@@ -22,14 +22,18 @@
     // requirements
     require_once("constants.php");
     require_once("helpers.php");
-    require_once("stock.php");
+    require_once("config.php");
 
 
     // require authentication for most pages
-    if (!preg_match("{/(:?login|logout|register)\d*\.php$}", $_SERVER["PHP_SELF"]))
+    if (!preg_match("{/(:?login|logout|register|return_to)\d*\.php$}", $_SERVER["PHP_SELF"]))
     {
         if (!isset($_SESSION["user"]))
+<<<<<<< HEAD
             redirect("return_to.php");
+=======
+            redirect("login.php");
+>>>>>>> aa1d6a330fc18659e2f659a3e04d5e8c6d1bc287
     }
 
     // connect to database server

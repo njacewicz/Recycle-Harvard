@@ -60,53 +60,64 @@
             var bin = $("#trash").attr('alt');
             
             // send the status and receptacle data to game2.php for validation and points update    
-            $.get("game2.php",{status:status, bin:bin},function(data){
-                console.log(data);
+            $.ajax("game2.php",{
+            data: {status:status, bin:bin},
+            dataType: "json",
+            success: function(data){ 
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                       
             // load a new image to the page for them to evaluate     
             random_image();
-            },"json");
-                     
+            }});          
       });
       
       // if the recycle image is clicked, validate
-      $("img.recycle").click(function() {
+      $("#recycle").click(function() {
             
-            // we want to store the values of the clicked receptacle and the status of the bin  
-            var bin = $("img.recycle").attr('alt'); 
-            console.log($("this")); 
+            // remember what bin was clicked (trash)  
+            var bin = $("#recycle").attr('alt');
             
-            // send the status and receptacle data to game2.php    
-            $.get("game2.php",{status:status, bin:bin},function(result){
-                $("#Correctness").html(result);
-                       
+            // send the status and receptacle data to game2.php for validation and points update    
+            $.ajax("game2.php",{
+            data: {status:status, bin:bin},
+            dataType: "json",
+            success: function(data){
+                console.log("halloooo");
+                
+                $("#Correctness").html(data.correct);
+                $("#points").html(data.points);
+                      
             // load a new image to the page for them to evaluate     
-            random_image();
-            });
-                     
+            random_image();  
+            }});
+                 
       });
      
      // if the ewaste image is clicked, validate
-     $("img.ewaste").click(function() {
+     $("#ewaste").click(function() {
             
-            // we want to store the values of the clicked receptacle and the status of the bin  
-            var bin = $("img.ewaste").attr('alt'); 
-            console.log($("this")); 
+              
+            // remember what bin was clicked (trash)  
+            var bin = $("#ewaste").attr('alt');
             
-            // send the status and receptacle data to game2.php    
-            $.get("game2.php",{status:status, bin:bin},function(result){
-                $("#Correctness").html(result);
-                     
+            // send the status and receptacle data to game2.php for validation and points update    
+            $.ajax("game2.php",{
+            data: {status:status, bin:bin},
+            dataType: "json",
+            success: function(data){
+                console.log("halloooo");
+                
+                $("#Correctness").html(data.correct);
+                $("#points").html(data.points);
+                      
             // load a new image to the page for them to evaluate     
             random_image();
-            });
-                     
-      }); 
- });  
+            }});
+
+    });  
   
-       
+});       
 
      </script>
     </head>
@@ -117,7 +128,7 @@
                  and gain one point per correctly sorted item!</p>
             <table align = "center">
                 <tr align = "center">
-                    <td id ="Correctness" style ="color:green">Testing123</td>
+                    <td id ="Correctness" style ="color:green">Are you right or wrong?</td>
                 <tr>    
                     <td>
                     <img id="RandomItem" alt="Item to Sort" src="Images/beerbottle.jpg"/>                      
@@ -125,8 +136,8 @@
                 </tr>
                 <tr id= "Caption" style="text-align:center"></tr>
                 <tr></tr>
-                <tr id ="Points" style="text-align:center">
-                    <td></td>
+                <tr style="text-align:center">
+                    <td id ="points"></td>
                  </tr>    
              </table>               
              <div id = "bottom">

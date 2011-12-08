@@ -39,8 +39,12 @@ if ($bin == $status)
      // access points
      $points = $row["points"];
      
-     // return correctness and points
-    print("{correct: 'You're correct!', points: $points}");
+     // define array
+     $arr = array('correct' => 'you are correct', 'points' => $points);
+     
+     // echo that array
+     echo json_encode($arr);
+
 }
            
 // if the clicked bin is the incorrect bin, tell the user so and subtract a point from their total
@@ -60,9 +64,13 @@ if ($bin != $status)
                      
     // access points
     $points = $row["points"];
-    
-     // return correctness and points
-    print("{correct: 'That's incorrect!', points: $points}");
+   
+    // define array
+    $arr = array('correct' => 'you are incorrect', 'points' => $points);
+     
+    // echo that array
+    echo json_encode($arr);
+
 }      
 
 

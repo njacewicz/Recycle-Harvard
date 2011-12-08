@@ -23,7 +23,7 @@
   <body>
     <img id="logo" src="Images/logo.jpg"/div>
     <div id="top">
-      <a href="index.php"><img alt="Recycle-Harvard" src="images/logo.gif"></a>
+      <a href="index.php"><img alt="Recycle-Harvard" src="Images/logo.jpg"></a>
     </div>
 
     <div id="middle">

@@ -20,7 +20,11 @@
     
     // prepare SQL
     $sql = "INSERT INTO users (name, email, house) VALUES ('$name',   '$email', '$house')";
+<<<<<<< HEAD
   
+=======
+    
+>>>>>>> aa1d6a330fc18659e2f659a3e04d5e8c6d1bc287
     // execute insertion
     $result = mysql_query($sql);
 

@@ -13,7 +13,7 @@
     require_once("includes/common.php"); 
  
     // configuration
-    require_once(dirname(__FILE__) . "/config.php");
+    //require_once(dirname(__FILE__) . "/config.php");
  
     // if user is already logged in, log out
     if (isset($_SESSION["user"]))

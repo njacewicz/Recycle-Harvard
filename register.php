@@ -24,14 +24,15 @@
   </head>
 
   <body>
-    <img id="logo" src="Images/logo.jpg"/>
+    
     <div id="top">
-      <a href="index.php"><img alt="C$50 Finance" src="images/logo.gif"></a>
+      <a href="index.php"><img alt="Recycle-Harvard" src="Images/logo.jpg"></a>
     </div>
 
     <div id="middle">
       <form action="register2.php" method="post">
         <table>
+          
           <tr>
             <td>House</td>
             <td>
@@ -52,6 +53,9 @@
                   </select>
             </td>
             <td colspan="2"><input type="submit" value="Create an account"></td> 
+          </tr>
+          <tr>
+            <td colspan="2"><input type="submit" value="Register"></td>
           </tr>
         </table>
       </form>
