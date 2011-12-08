@@ -70,6 +70,8 @@
                 // upon success, update points and whether their answer was correct
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
+                // give them the option to learn more
+                $("#Learn More").attr("href", singlestream.html);
             }});          
       });
       
@@ -89,7 +91,7 @@
             success: function(data){
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
-                      
+                $()      
             }});
                  
       });
@@ -127,7 +129,8 @@
                  and gain one point per correctly sorted item!</p>
      <table class="center">
              <tr align = "center">
-                <td id ="Correctness" style ="color:green">Are you right or wrong?</td>
+                <td id ="Correctness" style ="color:green"></td>
+                <td id = "Learn More">Confused? Click<a href="game.php">here</a>to learn more!</td>
              <tr>    
                 <td>
                     <img id="RandomItem" alt="Item to Sort" src=""/>                      

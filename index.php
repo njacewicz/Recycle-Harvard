@@ -48,7 +48,7 @@
          <br>
          Play our recycling game, and soon you'll be a pro at recycling!
          <br>
-         If you want to get your name on the big board and earn points for your house, Login below!
+         In order to play the game, please log in below.
    </div>
     
         <!--Big Board-->
