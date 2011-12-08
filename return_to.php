@@ -11,8 +11,6 @@
     // require common.php
     require_once("includes/common.php");
       
-    dump(isset($_SESSION["user"]));  
-    
     // remember which user, if any, logged in
     $user = CS50::getUser(RETURN_TO);
     if ($user !== false)
