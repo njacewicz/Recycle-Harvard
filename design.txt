@@ -20,9 +20,9 @@ When the JSON is returned, “Correctness” and “Points” in the HTML below 
 Game2.php
 After requiring common.php (which in turn requires a number of other files, among them config.php for our CS50ID login) we “GET” to get bin and status. We then check if bin equals status or not, and we either add or subtract a point from the mySQL database. To get a correct/incorrect message the number of points to appear, we created an array with settings for ‘correct’ and ‘points.’ We then echoed that array using json_encode. This looks simple, but it took us days. 
 
-The user can play the game as long as she wishes, and when she wants to log out, she may click the “Logout” button. This logs her out using logout2.php and redirects her to logout.php, which shows a thank you message and allows her to log in again if she wishes.
+The user can play the game as long as she wishes, and when she wants to log out, she may click the “Logout” button. This logs her out using logout.php.
 
-Most of the style on our pages is controlled by css style sheets.
+Most of the style on our pages is controlled by css style sheets. All of the images were Photoshopped to have a transparent background.
 
 
 
