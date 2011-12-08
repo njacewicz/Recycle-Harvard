@@ -40,7 +40,7 @@ if ($bin == $status)
      $points = $row["points"];
      
      // define array
-     $arr = array('correct' => 'You are correct', 'points' => $points);
+     $arr = array('correct' => 'You are correct', 'points' => $points, 'answer' => 0);
      
      // echo that array
      echo json_encode($arr);
@@ -66,7 +66,7 @@ if ($bin != $status)
     $points = $row["points"];
    
     // define array
-    $arr = array('correct' => 'You are incorrect', 'points' => $points);
+    $arr = array('correct' => 'You are incorrect', 'points' => $points, 'answer' => 1);
      
     // echo that array
     echo json_encode($arr);

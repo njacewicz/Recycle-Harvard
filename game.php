@@ -55,14 +55,14 @@
        // after the page is loaded and the trash is clicked, check whether that item belongs in the trash
        $(document).ready(function(){
        
-            // hide the learn more tag
+            // hide the learn more tag when the page is loaded
             $("#learn").hide();
             
-            // when the trash can is clicked, fire the validation 
+            // when the trash can is clicked, fire the validation check
             $("#trash").click(function() {
             
-            // show it
-             $("#learn").show();
+            // hide the learn more tag when the trash image is clicked
+            $("#learn").hide();
             
             // remember that the trash wash clicked  
             var bin = $("#trash").attr('alt');
@@ -79,7 +79,7 @@
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                 // if their answer was incorrect, show the learn tag
-                if (data.correct == "You are incorrect")
+                if (data.answer == 1)
                     $("#learn").show();
             }});          
       });
