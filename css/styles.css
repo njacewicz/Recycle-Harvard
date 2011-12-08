@@ -41,7 +41,13 @@ table.center
 /* make a border for all the tables and table cells*/
 table, th, td
 {
-border: 1px solid black;
+    border: 1px solid black;
+}
+
+/* make a border for all the tables and table cells*/
+tr, td
+{
+    text-align:center;
 }
 
 /* center text in bottom div */

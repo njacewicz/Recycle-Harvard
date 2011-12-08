@@ -53,7 +53,12 @@
        
        
        // after the page is loaded and the trash is clicked, check whether that item belongs in the trash
-       $(document).ready(function(){  
+       $(document).ready(function(){
+       
+            // hide the learn more tag
+            $("#learn").hide();
+            
+            // when the trash can is clicked, fire the validation 
             $("#trash").click(function() {
             
             // remember that the trash wash clicked  
@@ -70,8 +75,9 @@
                 // upon success, update points and whether their answer was correct
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
-                // give them the option to learn more
-                $('#learn').attr('href', 'singlestream.html');
+                // if their answer was incorrect, show the learn tag
+                if (data.correct == "You are incorrect")
+                    $("#learn").hide();
             }});          
       });
       
@@ -83,6 +89,9 @@
             
             // load a new image to the page for them to evaluate     
             random_image();  
+            
+            // hide the learn more tage
+            $("#learn").hide();
             
             // send the status and receptacle data to game2.php for validation and points update    
             $.ajax("game2.php",{
@@ -106,6 +115,9 @@
             
             // load a new image to the page for them to evaluate     
             random_image();
+            
+            // hide the learn more tage
+            $("#learn").hide();
             
             // send the status and receptacle data to game2.php for validation and points update    
             $.ajax("game2.php",{
@@ -132,16 +144,17 @@
      <p>Click on the proper receptacle (trash bin, single-stream recycling, or electronic recycling),
                  and gain one point per correctly sorted item!</p>
      <table class="center">
-             <tr align = "center">
+             <tr>
                 <td id ="Correctness" style ="color:green"></td>
-                <td>Confused? Click <a href="" id="learn">here </a>to learn more!</td>
+                <td>Confused? Click <a href="singlestream.html" id="learn">here </a>to learn more!</td>
              <tr>    
                 <td>
-                    <img id="RandomItem" alt="Item to Sort" src=""/>                      
+                    <img id="RandomItem" alt="Item to Sort" src="Images/logo.png"/>                      
                 </td>
              </tr>
-             <tr id= "Caption" style="text-align:center"></tr>
-                <td></td>
+             <tr>
+                <td id= "Caption"></td>
+             </tr>   
              <tr style="text-align:center">
                   <td id ="points"></td>
              </tr>    
