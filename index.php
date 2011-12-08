@@ -12,8 +12,6 @@
    // require common code
    require("includes/common.php");
    
-   // cache id
-   $id = $_SESSION["id"];
 
 ?>
 
