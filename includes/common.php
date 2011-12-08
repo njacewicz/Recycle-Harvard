@@ -29,7 +29,7 @@
     if (!preg_match("{/(:?login|logout|register|return_to)\d*\.php$}", $_SERVER["PHP_SELF"]))
     {
         if (!isset($_SESSION["user"]));
-            redirect("login.php");
+            redirect("return_to.php");
     }
 
     // connect to database server
