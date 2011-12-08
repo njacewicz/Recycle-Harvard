@@ -71,7 +71,7 @@
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                 // give them the option to learn more
-                $("#Learn More").attr("href", singlestream.html);
+                $("#Learn More").attr("href", "singlestream.html");
             }});          
       });
       
@@ -93,7 +93,7 @@
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                 // give them the option to learn more
-                $("#Learn More").attr("href", singlestream.html);   
+                $("#Learn More").attr("href", "singlestream.html");   
             }});
                  
       });
@@ -116,7 +116,7 @@
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
                 // give them the option to learn more
-                $("#Learn More").attr("href", erecycle.html);   
+                $("#Learn More").attr("href", "erecycle.html");   
             }});
 
      });  
