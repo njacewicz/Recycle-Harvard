@@ -59,17 +59,17 @@
             // remember that the trash wash clicked  
             var bin = $("#trash").attr('alt');
             
+            // load a new image to the page for them to evaluate     
+            random_image();
+            
             // make the ajax call to server    
             $.ajax("game2.php",{
             data: {status:status, bin:bin},
             dataType: "json",
             success: function(data){ 
-                // upon success, tell the user whether they got the right answer and the total number of points they have
+                // upon success, update 
                 $("#Correctness").html(data.correct);
                 $("#points").html(data.points);
-                      
-            // load a new image to the page for them to evaluate     
-            random_image();
             }});          
       });
       

@@ -45,9 +45,10 @@
     <div style="color: teal">
          Welcome to Recycle Harvard!
          <br>
-         Take our quiz, and soon you'll be a pro at recycling!
          <br>
-         The more questions you get right, the more participation points you win for Green Cup.
+         Play our recycling game, and soon you'll be a pro at recycling!
+         <br>
+         If you want to get your name on the big board and earn points for your house, Login below!
    </div>
     
         <!--Big Board-->
