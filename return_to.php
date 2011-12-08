@@ -15,19 +15,13 @@
     $user = CS50::getUser(RETURN_TO);
     if ($user !== false)
         $_SESSION["user"] = $user;
- 
-    // redirect user to index.php
-    $protocol = (isset($_SERVER["HTTPS"])) ? "https" : "http";
-    $host  = $_SERVER["HTTP_HOST"];
-    $path = rtrim(dirname($_SERVER["PHP_SELF"]), "/\\");
-    //header("Location: {$protocol}://{$host}{$path}/index.php");
     
     // find the user's id
     $email = mysql_real_escape_string($_SESSION["user"]["email"]);
     $result = mysql_query("SELECT id FROM users WHERE email = $email");
     
     // dump test
-    //dump($result);
+    dump($email);
                       
     // access the data row
     $row = mysql_fetch_array($result); 
