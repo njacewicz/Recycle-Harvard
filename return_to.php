@@ -21,7 +21,7 @@
     $result = mysql_query("SELECT id FROM users WHERE email = $email");
     
     // dump test
-    echo(mysql_error());
+    dump(mysql_error());
                       
     // access the data row
     $row = mysql_fetch_array($result); 
