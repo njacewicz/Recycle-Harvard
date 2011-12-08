@@ -29,7 +29,6 @@
         header("Location: " . CS50::getLoginUrl(TRUST_ROOT, RETURN_TO));
  
 ?>
-<<<<<<< HEAD
 
 <!DOCTYPE html>
 
@@ -82,5 +81,3 @@
   </body>
 
 </html>
-=======
->>>>>>> aa1d6a330fc18659e2f659a3e04d5e8c6d1bc287
